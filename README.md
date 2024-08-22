@@ -11,7 +11,7 @@
 
 - 🌱 I’m currently learning **Redis**
 
-- 💬 Ask me about **NextJS , MEARN**
+- 💬 Ask me about **NextJS , MERN**
 
 - 📫 How to reach me **satishchaubey02@gmail.com**
 
