@@ -1,192 +1,138 @@
-<h1 align="center">Hi 👋, I'm Satish Kumar Chaubey</h1>
-<h3 align="center">🚀 AI Engineer | Full Stack Developer | Real-Time Systems Builder</h3>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: Arial, sans-serif; background: transparent; color: #111; }
+  .container { max-width: 900px; margin: 0 auto; padding: 1.5rem 1rem; }
 
-<p align="center">
-  <img src="https://komarev.com/ghpvc/?username=satishchaubey&label=Profile%20views&color=0e75b6&style=flat" />
-</p>
+  .hero { text-align: center; padding: 2rem 1rem; }
+  .hero h1 { font-size: 30px; margin-bottom: 0.5rem; }
+  .hero h2 { font-size: 16px; color: #555; margin-bottom: 1rem; }
 
----
+  .tags { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; margin-top: 10px; }
+  .tag { padding: 5px 12px; border-radius: 20px; font-size: 12px; border: 1px solid #ddd; }
 
-## 🧠 Who Am I?
+  .section { margin: 2rem 0; }
+  .section h3 { margin-bottom: 1rem; font-size: 14px; text-transform: uppercase; color: #666; }
 
-I build **production-grade AI systems** and **scalable full-stack applications**.
+  .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px,1fr)); gap: 12px; }
 
-- ⚡ Specialized in **AI + Real-Time Communication Systems**
-- 🧠 Working with **LLMs (Gemini, GPT, Claude)**
-- 🔊 Building **Human-like Voice Assistants**
-- 🏗️ Strong in **System Design & Backend Architecture**
-- 💻 Tech: **Next.js, NestJS, Redis, WebRTC**
+  .card { border: 1px solid #eee; border-radius: 10px; padding: 1rem; }
+  .card h4 { margin-bottom: 6px; }
+  .card p { font-size: 13px; color: #555; }
 
----
+  .flow { background: #f7f7f7; padding: 1rem; border-radius: 10px; font-size: 13px; }
 
-## 🚀 Featured Projects
+  .stack { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px,1fr)); gap: 10px; }
+  .stack div { border: 1px solid #eee; padding: 8px; border-radius: 8px; font-size: 13px; }
 
-### 🧠 AI Voice Assistant (Real-Time)
-> Human-like conversational AI over calls
+  .connect a { margin-right: 10px; text-decoration: none; font-size: 13px; }
+</style>
 
-**Tech Stack:**
-- STT: Sarvam AI (Bulbul)
-- LLM: Gemini Flash
-- TTS: Sarvam AI (Saaras)
-- Infra: FastAPI, WebRTC, Twilio
+<div class="container">
 
----
+  <!-- HERO -->
+  <div class="hero">
+    <h1>Hi 👋, I'm Satish Kumar Chaubey</h1>
+    <h2>🚀 AI Engineer | Full Stack Developer | Real-Time Systems Builder</h2>
 
-### ⚡ LLM Email Automation System
-> Intelligent workflow automation using LLM pipelines
+    <div class="tags">
+      <span class="tag">LLMs + Agents</span>
+      <span class="tag">Voice AI</span>
+      <span class="tag">WebRTC</span>
+      <span class="tag">Next.js</span>
+      <span class="tag">NestJS</span>
+      <span class="tag">FastAPI</span>
+      <span class="tag">Redis</span>
+      <span class="tag">PostgreSQL</span>
+      <span class="tag">Shopify</span>
+      <span class="tag">WordPress</span>
+    </div>
+  </div>
 
-- Prompt chaining
-- Decision-based routing
-- Context-aware responses
+  <!-- ABOUT -->
+  <div class="section">
+    <h3>About Me</h3>
+    <p>
+      I build <b>production-grade AI systems</b>, real-time applications, and scalable backend architectures.
+      Currently focused on LLM pipelines, voice AI, and high-performance systems using FastAPI and NestJS.
+    </p>
+  </div>
 
----
+  <!-- PROJECTS -->
+  <div class="section">
+    <h3>Featured Projects</h3>
 
-### 🌐 Full Stack Scalable Apps
-> Production-ready architecture
+    <div class="grid">
+      <div class="card">
+        <h4>🎙 AI Voice Assistant</h4>
+        <p>Real-time conversational AI with streaming STT → LLM → TTS pipeline using FastAPI, WebRTC, and Twilio.</p>
+      </div>
 
-- Next.js (Frontend)
-- NestJS (Backend)
-- Redis + BullMQ (Queues)
-- PostgreSQL / MongoDB
+      <div class="card">
+        <h4>✉️ LLM Email Automation</h4>
+        <p>Automation engine with prompt chaining, decision routing, and context-aware responses.</p>
+      </div>
 
----
+      <div class="card">
+        <h4>🏗 Scalable Backend Systems</h4>
+        <p>Microservices architecture using NestJS, Redis queues, and multi-database systems.</p>
+      </div>
+    </div>
+  </div>
 
-## 🧠 System Design: LLM Pipeline
+  <!-- SYSTEM DESIGN -->
+  <div class="section">
+    <h3>LLM Pipeline</h3>
+    <div class="flow">
+      User → API (FastAPI/NestJS) → Preprocessing → LLM → Post-processing → Response
+    </div>
+  </div>
 
+  <div class="section">
+    <h3>Voice AI Flow</h3>
+    <div class="flow">
+      User Speech → Twilio/WebRTC → STT → LLM → TTS → Audio Response
+    </div>
+  </div>
 
-User Input
-↓
-API Gateway (FastAPI / NestJS)
-↓
-Preprocessing Layer
+  <!-- TECH STACK -->
+  <div class="section">
+    <h3>Tech Stack</h3>
 
-Cleaning
-Context Injection
-↓
-LLM (Gemini / GPT / Claude)
-↓
-Post Processing
-Formatting
-Validation
-↓
-Response to User
+    <div class="stack">
+      <div>Frontend: React, Next.js, Tailwind</div>
+      <div>Backend: Node.js, NestJS, FastAPI</div>
+      <div>AI: Gemini, GPT, Claude</div>
+      <div>Infra: Docker, Redis, BullMQ</div>
+      <div>DB: PostgreSQL, MongoDB</div>
+    </div>
+  </div>
 
----
+  <!-- CMS -->
+  <div class="section">
+    <h3>E-commerce & CMS</h3>
 
-## 🔊 System Design: Voice AI Flow
+    <div class="stack">
+      <div>Shopify (Store + Customization)</div>
+      <div>WordPress (Themes + Plugins)</div>
+    </div>
+  </div>
 
+  <!-- IMPACT -->
+  <div class="section">
+    <h3>Impact</h3>
+    <ul>
+      <li>Built low-latency real-time AI systems</li>
+      <li>Designed scalable backend architectures</li>
+      <li>Developed LLM-powered automation workflows</li>
+    </ul>
+  </div>
 
-User Speech
-↓
-📞 Twilio Call / WebRTC Stream
-↓
-🎤 Speech-to-Text (Sarvam Bulbul)
-↓
-🧠 LLM Processing (Gemini Flash)
-↓
-🔊 Text-to-Speech (Sarvam Saaras)
-↓
-📞 Audio Response to User
+  <!-- CONNECT -->
+  <div class="section connect">
+    <h3>Connect</h3>
+    <a href="https://linkedin.com/in/satish-chaubey/">LinkedIn</a>
+    <a href="https://github.com/satishchaubey">GitHub</a>
+    <a href="mailto:satishchaubey02@gmail.com">Email</a>
+  </div>
 
-
----
-
-## ⚙️ Tech Stack
-
-### 🖥️ Frontend
-<p>
-  <img src="https://skillicons.dev/icons?i=react,nextjs,redux,tailwind" />
-</p>
-
-### 🧠 Backend
-<p>
-  <img src="https://skillicons.dev/icons?i=nodejs,nestjs,express" />
-</p>
-
-### ⚡ Infrastructure & Tools
-<p>
-  <img src="https://skillicons.dev/icons?i=docker,redis,postgres,mongodb,firebase,git" />
-</p>
-
----
-
-## 📊 GitHub Stats
-
-<p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=satishchaubey&show_icons=true&theme=tokyonight" />
-</p>
-
-<p align="center">
-  <img src="https://github-readme-streak-stats.herokuapp.com/?user=satishchaubey&theme=tokyonight" />
-</p>
-
----
-
-## 🎯 What I Focus On
-
-- 🧠 AI Engineering (LLMs + Agents)
-- ⚡ Real-Time Systems (WebRTC, Streaming)
-- 🏗️ Scalable Backend Systems
-- 🔗 AI + Web Integration
-
----
-
-## 🌐 Connect With Me
-
-<p align="left">
-<a href="https://linkedin.com/in/satish-chaubey/" target="blank">
-  <img src="https://skillicons.dev/icons?i=linkedin" height="40" />
-</a>
-<a href="https://instagram.com/cyrus_2512" target="blank">
-  <img src="https://skillicons.dev/icons?i=instagram" height="40" />
-</a>
-<a href="https://www.youtube.com/c/Satish Kumar Chaubey" target="blank">
-  <img src="https://skillicons.dev/icons?i=youtube" height="40" />
-</a>
-</p>
-
----
-
-## 🚀 Goals
-
-- Crack FAANG / top product companies 💼  
-- Build scalable AI products  
-- Launch AI SaaS 🚀  
-
----
-
-⭐️ From [Satish Chaubey](https://github.com/satishchaubey)
-🔥 Next-Level Upgrade (Very Important)
-
-Now listen carefully — this is what actually makes it FAANG-level:
-
-1. Add THESE repos (must do)
-
-Create pinned repos:
-
-ai-voice-assistant-realtime
-llm-email-automation
-nextjs-nestjs-scalable-app
-2. Add Architecture Diagram INSIDE each repo
-
-Example (put inside project README):
-
-Client → Next.js → API → NestJS → Redis Queue → Worker → LLM → Response
-3. Add Proof of Work
-
-In each project README:
-
-Screenshots
-Demo video (very powerful)
-API flow explanation
-4. Your Positioning (Reality Check)
-
-After this:
-
-❌ You are NOT "MERN developer"
-✅ You are "AI Systems Engineer"
-
-This alone can:
-👉 Double your salary potential
-👉 Make interviews easier
-👉 Get recruiter attention faster
+</div>
