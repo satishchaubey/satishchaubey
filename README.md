@@ -1,12 +1,192 @@
-![MasterHead](https://firebasestorage.googleapis.com/v0/b/flexi-coding.appspot.com/o/dempgi7-520f8d5f-63d4-4453-8822-dbc149ae27f8.gif?alt=media&token=91c0c7b2-93c3-4029-b011-1a8703c5730d)
+<h1 align="center">Hi 👋, I'm Satish Kumar Chaubey</h1>
+<h3 align="center">🚀 AI Engineer | Full Stack Developer | Real-Time Systems Builder</h3>
 
-<h1 align="center">Hi 👋, I'm Satish Kumar Chaubey</h1> <h3 align="center">A passionate FullStack Developer from India</h3> <img align="right" alt="Coding" width="400" src="https://cdn.dribbble.com/users/1162077/screenshots/3848914/programmer.gif"> <p align="left"> <img src="https://komarev.com/ghpvc/?username=satishchaubey&label=Profile%20views&color=0e75b6&style=flat" alt="satishchaubey" /> </p>
-🔭 I’m currently working on full-stack development projects<br>
-💬 Ask me about React.js, Next.js, MERN Stack, and Blockchain Integration<br>
-📫 How to reach me satishchaubey02@gmail.com<br>
-⚡ Fun fact I am constantly curious and love learning new tech!<br>
-<h3 align="left">Connect with me:</h3> <p align="left"> <a href="https://linkedin.com/in/satish-chaubey/" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" alt="satish-chaubey" height="30" width="40" /></a> <a href="https://instagram.com/cyrus_2512" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/instagram.svg" alt="cyrus_2512" height="30" width="40" /></a> <a href="https://www.youtube.com/c/Satish Kumar Chaubey" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/youtube.svg" alt="Satish Kumar Chaubey" height="30" width="40" /></a> </p>
-<h3 align="left">Languages and Tools:</h3> <p align="left"> <a href="https://nextjs.org/" target="_blank" rel="noreferrer"> <img src="https://cdn.worldvectorlogo.com/logos/nextjs-2.svg" alt="nextjs" width="40" height="40"/> </a> <a href="https://reactjs.org/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original-wordmark.svg" alt="react" width="40" height="40"/> </a> <a href="https://redux.js.org" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/redux/redux-original.svg" alt="redux" width="40" height="40"/> </a> <a href="https://nodejs.org/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original-wordmark.svg" alt="nodejs" width="40" height="40"/> </a> <a href="https://www.mongodb.com/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mongodb/mongodb-original-wordmark.svg" alt="mongodb" width="40" height="40"/> </a> <a href="https://graphql.org" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/graphql/graphql-icon.svg" alt="graphql" width="40" height="40"/> </a> <a href="https://git-scm.com/" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/git-scm/git-scm-icon.svg" alt="git" width="40" height="40"/> </a> <a href="https://getbootstrap.com" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/bootstrap/bootstrap-plain-wordmark.svg" alt="bootstrap" width="40" height="40"/> </a> <a href="https://tailwindcss.com/" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/tailwindcss/tailwindcss-icon.svg" alt="tailwind" width="40" height="40"/> </a> <a href="https://www.docker.com/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/docker/docker-original-wordmark.svg" alt="docker" width="40" height="40"/> </a> <a href="https://firebase.google.com/" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/firebase/firebase-icon.svg" alt="firebase" width="40" height="40"/> </a> </p>
-<p><img align="left" src="https://github-readme-stats.vercel.app/api/top-langs?username=satishchaubey&show_icons=true&locale=en&layout=compact&theme=tokyonight" alt="satishchaubey" /></p> <p>&nbsp;<img align="center" src="https://github-readme-stats.vercel.app/api?username=satishchaubey&show_icons=true&locale=en&theme=tokyonight" alt="satishchaubey" /></p> <p><img align="center" src="https://github-readme-streak-stats.herokuapp.com/?user=satishchaubey&theme=tokyonight" alt="satishchaubey" /></p>
+<p align="center">
+  <img src="https://komarev.com/ghpvc/?username=satishchaubey&label=Profile%20views&color=0e75b6&style=flat" />
+</p>
 
-<p><img align="center" src="https://github-readme-streak-stats.herokuapp.com/?user=rishavchanda&&theme=tokyonight" alt="satish" /></p>
+---
+
+## 🧠 Who Am I?
+
+I build **production-grade AI systems** and **scalable full-stack applications**.
+
+- ⚡ Specialized in **AI + Real-Time Communication Systems**
+- 🧠 Working with **LLMs (Gemini, GPT, Claude)**
+- 🔊 Building **Human-like Voice Assistants**
+- 🏗️ Strong in **System Design & Backend Architecture**
+- 💻 Tech: **Next.js, NestJS, Redis, WebRTC**
+
+---
+
+## 🚀 Featured Projects
+
+### 🧠 AI Voice Assistant (Real-Time)
+> Human-like conversational AI over calls
+
+**Tech Stack:**
+- STT: Sarvam AI (Bulbul)
+- LLM: Gemini Flash
+- TTS: Sarvam AI (Saaras)
+- Infra: FastAPI, WebRTC, Twilio
+
+---
+
+### ⚡ LLM Email Automation System
+> Intelligent workflow automation using LLM pipelines
+
+- Prompt chaining
+- Decision-based routing
+- Context-aware responses
+
+---
+
+### 🌐 Full Stack Scalable Apps
+> Production-ready architecture
+
+- Next.js (Frontend)
+- NestJS (Backend)
+- Redis + BullMQ (Queues)
+- PostgreSQL / MongoDB
+
+---
+
+## 🧠 System Design: LLM Pipeline
+
+
+User Input
+↓
+API Gateway (FastAPI / NestJS)
+↓
+Preprocessing Layer
+
+Cleaning
+Context Injection
+↓
+LLM (Gemini / GPT / Claude)
+↓
+Post Processing
+Formatting
+Validation
+↓
+Response to User
+
+---
+
+## 🔊 System Design: Voice AI Flow
+
+
+User Speech
+↓
+📞 Twilio Call / WebRTC Stream
+↓
+🎤 Speech-to-Text (Sarvam Bulbul)
+↓
+🧠 LLM Processing (Gemini Flash)
+↓
+🔊 Text-to-Speech (Sarvam Saaras)
+↓
+📞 Audio Response to User
+
+
+---
+
+## ⚙️ Tech Stack
+
+### 🖥️ Frontend
+<p>
+  <img src="https://skillicons.dev/icons?i=react,nextjs,redux,tailwind" />
+</p>
+
+### 🧠 Backend
+<p>
+  <img src="https://skillicons.dev/icons?i=nodejs,nestjs,express" />
+</p>
+
+### ⚡ Infrastructure & Tools
+<p>
+  <img src="https://skillicons.dev/icons?i=docker,redis,postgres,mongodb,firebase,git" />
+</p>
+
+---
+
+## 📊 GitHub Stats
+
+<p align="center">
+  <img src="https://github-readme-stats.vercel.app/api?username=satishchaubey&show_icons=true&theme=tokyonight" />
+</p>
+
+<p align="center">
+  <img src="https://github-readme-streak-stats.herokuapp.com/?user=satishchaubey&theme=tokyonight" />
+</p>
+
+---
+
+## 🎯 What I Focus On
+
+- 🧠 AI Engineering (LLMs + Agents)
+- ⚡ Real-Time Systems (WebRTC, Streaming)
+- 🏗️ Scalable Backend Systems
+- 🔗 AI + Web Integration
+
+---
+
+## 🌐 Connect With Me
+
+<p align="left">
+<a href="https://linkedin.com/in/satish-chaubey/" target="blank">
+  <img src="https://skillicons.dev/icons?i=linkedin" height="40" />
+</a>
+<a href="https://instagram.com/cyrus_2512" target="blank">
+  <img src="https://skillicons.dev/icons?i=instagram" height="40" />
+</a>
+<a href="https://www.youtube.com/c/Satish Kumar Chaubey" target="blank">
+  <img src="https://skillicons.dev/icons?i=youtube" height="40" />
+</a>
+</p>
+
+---
+
+## 🚀 Goals
+
+- Crack FAANG / top product companies 💼  
+- Build scalable AI products  
+- Launch AI SaaS 🚀  
+
+---
+
+⭐️ From [Satish Chaubey](https://github.com/satishchaubey)
+🔥 Next-Level Upgrade (Very Important)
+
+Now listen carefully — this is what actually makes it FAANG-level:
+
+1. Add THESE repos (must do)
+
+Create pinned repos:
+
+ai-voice-assistant-realtime
+llm-email-automation
+nextjs-nestjs-scalable-app
+2. Add Architecture Diagram INSIDE each repo
+
+Example (put inside project README):
+
+Client → Next.js → API → NestJS → Redis Queue → Worker → LLM → Response
+3. Add Proof of Work
+
+In each project README:
+
+Screenshots
+Demo video (very powerful)
+API flow explanation
+4. Your Positioning (Reality Check)
+
+After this:
+
+❌ You are NOT "MERN developer"
+✅ You are "AI Systems Engineer"
+
+This alone can:
+👉 Double your salary potential
+👉 Make interviews easier
+👉 Get recruiter attention faster
