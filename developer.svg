@@ -1,243 +1,230 @@
-<svg fill="none" viewBox="0 0 800 450" width="800" height="450" xmlns="http://www.w3.org/2000/svg">
+<svg fill="none" viewBox="0 0 850 380" width="850" height="380" xmlns="http://www.w3.org/2000/svg">
   <style>
     @keyframes floatSlow {
-      0%, 100% { transform: translateY(0px) rotate(0deg); }
-      50% { transform: translateY(-10px) rotate(2deg); }
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-8px); }
     }
     @keyframes floatFast {
-      0%, 100% { transform: translateY(0px) rotate(0deg); }
-      50% { transform: translateY(-14px) rotate(-2deg); }
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-12px); }
     }
-    @keyframes pulseScreen {
-      0%, 100% { opacity: 0.85; filter: drop-shadow(0 0 15px rgba(56, 189, 248, 0.6)); }
-      50% { opacity: 1; filter: drop-shadow(0 0 25px rgba(168, 85, 247, 0.8)); }
+    @keyframes pulseGlow {
+      0%, 100% { opacity: 0.7; filter: drop-shadow(0 0 8px rgba(56, 189, 248, 0.4)); }
+      50% { opacity: 1; filter: drop-shadow(0 0 18px rgba(168, 85, 247, 0.8)); }
     }
     @keyframes codeBlink {
       0%, 100% { opacity: 0.2; }
       50% { opacity: 1; }
     }
-    @keyframes waveHand {
-      0%, 100% { transform: rotate(0deg); }
-      50% { transform: rotate(15deg); }
-    }
-    @keyframes orbit1 {
-      0% { transform: translate(0, 0); }
-      50% { transform: translate(8px, -12px); }
-      100% { transform: translate(0, 0); }
-    }
-    @keyframes orbit2 {
-      0% { transform: translate(0, 0); }
-      50% { transform: translate(-10px, -8px); }
-      100% { transform: translate(0, 0); }
+    @keyframes typingHands {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-2px); }
     }
 
-    .badge-float-1 { animation: floatSlow 4s ease-in-out infinite; }
-    .badge-float-2 { animation: floatFast 3.5s ease-in-out infinite 0.5s; }
-    .badge-float-3 { animation: floatSlow 4.5s ease-in-out infinite 1s; }
-    .badge-float-4 { animation: floatFast 3.8s ease-in-out infinite 1.5s; }
-    .badge-float-5 { animation: floatSlow 4.2s ease-in-out infinite 0.8s; }
-    .badge-float-6 { animation: floatFast 3.6s ease-in-out infinite 1.2s; }
-    .badge-float-7 { animation: floatSlow 4.8s ease-in-out infinite 0.3s; }
-    .screen-glow { animation: pulseScreen 3s ease-in-out infinite; }
-    .cursor-blink { animation: codeBlink 1s infinite; }
+    .badge-float-1 { animation: floatSlow 3.8s ease-in-out infinite; }
+    .badge-float-2 { animation: floatFast 3.2s ease-in-out infinite 0.4s; }
+    .badge-float-3 { animation: floatSlow 4.2s ease-in-out infinite 0.8s; }
+    .badge-float-4 { animation: floatFast 3.5s ease-in-out infinite 1.2s; }
+    .badge-float-5 { animation: floatSlow 4s ease-in-out infinite 0.6s; }
+    .badge-float-6 { animation: floatFast 3.4s ease-in-out infinite 1.5s; }
+    .badge-float-7 { animation: floatSlow 4.4s ease-in-out infinite 0.2s; }
+    .screen-glow { animation: pulseGlow 3s ease-in-out infinite; }
+    .cursor-blink { animation: codeBlink 0.9s infinite; }
+    .hands-typing { animation: typingHands 0.4s ease-in-out infinite; }
   </style>
 
   <defs>
     <!-- Background Gradient -->
-    <linearGradient id="canvasGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+    <linearGradient id="devBg" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" stop-color="#0b0f19"/>
       <stop offset="50%" stop-color="#111827"/>
       <stop offset="100%" stop-color="#070a13"/>
     </linearGradient>
 
-    <!-- Laptop Screen Glow Gradient -->
-    <linearGradient id="screenGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#0284c7"/>
-      <stop offset="50%" stop-color="#38bdf8"/>
-      <stop offset="100%" stop-color="#818cf8"/>
+    <!-- Card Border Gradient -->
+    <linearGradient id="devBorder" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8"/>
+      <stop offset="50%" stop-color="#818cf8"/>
+      <stop offset="100%" stop-color="#c084fc"/>
     </linearGradient>
 
-    <!-- Neon Glow Filter -->
+    <!-- Drop Shadow Filter -->
     <filter id="badgeShadow" x="-20%" y="-20%" width="140%" height="140%">
-      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#000000" flood-opacity="0.5"/>
+      <feDropShadow dx="0" dy="4" stdDeviation="5" flood-color="#000000" flood-opacity="0.6"/>
     </filter>
 
-    <filter id="laptopBeam" x="-50%" y="-50%" width="200%" height="200%">
-      <feGaussianBlur stdDeviation="25" result="blur"/>
+    <filter id="ambientLight" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="30" result="blur"/>
     </filter>
   </defs>
 
-  <!-- Background Base Container -->
-  <rect width="800" height="450" rx="16" fill="url(#canvasGrad)" stroke="#1e293b" stroke-width="2"/>
+  <!-- Container Box -->
+  <rect x="2" y="2" width="846" height="376" rx="16" fill="url(#devBg)" stroke="url(#devBorder)" stroke-width="1.5"/>
 
-  <!-- Background Grid Lines -->
-  <g opacity="0.08" stroke="#38bdf8" stroke-width="1">
-    <line x1="0" y1="90" x2="800" y2="90"/>
-    <line x1="0" y1="180" x2="800" y2="180"/>
-    <line x1="0" y1="270" x2="800" y2="270"/>
-    <line x1="0" y1="360" x2="800" y2="360"/>
-    <line x1="160" y1="0" x2="160" y2="450"/>
-    <line x1="320" y1="0" x2="320" y2="450"/>
-    <line x1="480" y1="0" x2="480" y2="450"/>
-    <line x1="640" y1="0" x2="640" y2="450"/>
+  <!-- Background Cyber Grid -->
+  <g opacity="0.06" stroke="#38bdf8" stroke-width="1">
+    <line x1="0" y1="75" x2="850" y2="75"/>
+    <line x1="0" y1="150" x2="850" y2="150"/>
+    <line x1="0" y1="225" x2="850" y2="225"/>
+    <line x1="0" y1="300" x2="850" y2="300"/>
+    <line x1="170" y1="0" x2="170" y2="380"/>
+    <line x1="340" y1="0" x2="340" y2="380"/>
+    <line x1="510" y1="0" x2="510" y2="380"/>
+    <line x1="680" y1="0" x2="680" y2="380"/>
   </g>
 
-  <!-- Ambient Light from Behind Desk -->
-  <circle cx="400" cy="270" r="160" fill="#38bdf8" opacity="0.12" filter="url(#laptopBeam)"/>
-  <circle cx="400" cy="220" r="100" fill="#a855f7" opacity="0.1" filter="url(#laptopBeam)"/>
+  <!-- Ambient Light Orbs -->
+  <circle cx="425" cy="220" r="130" fill="#38bdf8" opacity="0.1" filter="url(#ambientLight)"/>
+  <circle cx="425" cy="160" r="90" fill="#a855f7" opacity="0.12" filter="url(#ambientLight)"/>
 
-  <!-- ==================== DESK & ENVIRONMENT ==================== -->
+  <!-- ==================== DESK & PERIPHERALS ==================== -->
   <!-- Desk Surface -->
-  <path d="M 120 370 L 680 370 L 660 410 L 140 410 Z" fill="#1e293b" stroke="#334155" stroke-width="1.5"/>
-  <rect x="150" y="410" width="16" height="30" rx="4" fill="#0f172a"/>
-  <rect x="634" y="410" width="16" height="30" rx="4" fill="#0f172a"/>
+  <path d="M 160 310 L 690 310 L 670 345 L 180 345 Z" fill="#1e293b" stroke="#334155" stroke-width="1.5"/>
+  <rect x="195" y="345" width="14" height="25" rx="3" fill="#0f172a"/>
+  <rect x="640" y="345" width="14" height="25" rx="3" fill="#0f172a"/>
 
   <!-- Coffee Mug -->
-  <rect x="220" y="340" width="22" height="28" rx="4" fill="#0284c7"/>
-  <path d="M 242 346 C 250 346 250 358 242 358" stroke="#0284c7" stroke-width="3" fill="none"/>
-  <!-- Steam from coffee -->
-  <path d="M 226 335 Q 228 328 225 320" stroke="#94a3b8" stroke-width="1.5" stroke-linecap="round" opacity="0.5"/>
-  <path d="M 234 335 Q 236 328 233 320" stroke="#94a3b8" stroke-width="1.5" stroke-linecap="round" opacity="0.5"/>
+  <rect x="250" y="280" width="20" height="26" rx="4" fill="#0284c7"/>
+  <path d="M 270 286 C 278 286 278 298 270 298" stroke="#0284c7" stroke-width="3" fill="none"/>
+  <!-- Steam -->
+  <path d="M 256 274 Q 259 268 256 262" stroke="#94a3b8" stroke-width="1.2" stroke-linecap="round" opacity="0.4"/>
+  <path d="M 263 274 Q 266 268 263 262" stroke="#94a3b8" stroke-width="1.2" stroke-linecap="round" opacity="0.4"/>
 
-  <!-- Desk Plant / Tech Accessory -->
-  <rect x="560" y="345" width="28" height="24" rx="4" fill="#334155"/>
-  <path d="M 574 345 Q 560 325 555 315 Q 574 328 574 345" fill="#10b981"/>
-  <path d="M 574 345 Q 588 325 593 315 Q 574 328 574 345" fill="#059669"/>
+  <!-- Desk Mini Plant -->
+  <rect x="580" y="288" width="24" height="20" rx="3" fill="#334155"/>
+  <path d="M 592 288 Q 580 270 575 262 Q 592 272 592 288" fill="#10b981"/>
+  <path d="M 592 288 Q 604 270 609 262 Q 592 272 592 288" fill="#059669"/>
 
   <!-- ==================== DEVELOPER (BOY) ==================== -->
-  <!-- Chair Backrest -->
-  <rect x="360" y="210" width="80" height="130" rx="14" fill="#0f172a" stroke="#1e293b" stroke-width="2"/>
-  <rect x="395" y="340" width="10" height="40" fill="#1e293b"/>
+  <!-- Ergonomic Chair -->
+  <rect x="385" y="160" width="80" height="110" rx="12" fill="#0f172a" stroke="#1e293b" stroke-width="2"/>
+  <rect x="420" y="270" width="10" height="40" fill="#1e293b"/>
 
-  <!-- Head & Hair -->
   <!-- Neck -->
-  <rect x="392" y="222" width="16" height="18" fill="#fbcfe8" rx="3"/>
+  <rect x="417" y="172" width="16" height="15" fill="#fbcfe8" rx="3"/>
   <!-- Head -->
-  <ellipse cx="400" cy="205" rx="20" ry="24" fill="#fed7aa"/>
-  <!-- Hair (Modern styled dark hair) -->
-  <path d="M 378 200 C 378 180 390 174 402 174 C 418 174 425 184 424 200 C 418 190 408 192 396 193 C 386 194 382 198 378 200 Z" fill="#1e1b4b"/>
-  <!-- Ear & Headphone / Glasses -->
-  <ellipse cx="379" cy="206" rx="4" ry="6" fill="#fed7aa"/>
-  <ellipse cx="421" cy="206" rx="4" ry="6" fill="#fed7aa"/>
-  <!-- Sleek Modern Developer Glasses -->
-  <rect x="388" y="200" width="10" height="7" rx="2" fill="none" stroke="#38bdf8" stroke-width="1.5"/>
-  <rect x="402" y="200" width="10" height="7" rx="2" fill="none" stroke="#38bdf8" stroke-width="1.5"/>
-  <line x1="398" y1="203" x2="402" y2="203" stroke="#38bdf8" stroke-width="1.5"/>
+  <ellipse cx="425" cy="155" rx="20" ry="24" fill="#fed7aa"/>
+  <!-- Hair (Modern haircut) -->
+  <path d="M 404 150 C 404 130 416 124 427 124 C 443 124 450 134 449 150 C 443 140 433 142 421 143 C 411 144 408 148 404 150 Z" fill="#1e1b4b"/>
+  <!-- Ears -->
+  <ellipse cx="404" cy="156" rx="3.5" ry="5.5" fill="#fed7aa"/>
+  <ellipse cx="446" cy="156" rx="3.5" ry="5.5" fill="#fed7aa"/>
+  <!-- Glasses -->
+  <rect x="413" y="150" width="10" height="7" rx="2" fill="none" stroke="#38bdf8" stroke-width="1.5"/>
+  <rect x="427" y="150" width="10" height="7" rx="2" fill="none" stroke="#38bdf8" stroke-width="1.5"/>
+  <line x1="423" y1="153" x2="427" y2="153" stroke="#38bdf8" stroke-width="1.5"/>
 
-  <!-- Body / Hoodie (Cyan / Indigo theme) -->
-  <path d="M 365 240 C 375 234 425 234 435 240 L 445 320 L 355 320 Z" fill="#1e293b" stroke="#334155" stroke-width="1.5"/>
-  <!-- Hoodie Collar / Details -->
-  <path d="M 390 240 L 400 258 L 410 240" stroke="#38bdf8" stroke-width="2" fill="none"/>
+  <!-- Hoodie Body -->
+  <path d="M 390 190 C 400 184 450 184 460 190 L 470 270 L 380 270 Z" fill="#1e293b" stroke="#334155" stroke-width="1.5"/>
+  <path d="M 415 190 L 425 208 L 435 190" stroke="#38bdf8" stroke-width="2" fill="none"/>
 
-  <!-- Arms reaching towards laptop keyboard -->
-  <path d="M 360 260 L 368 315 L 388 340" stroke="#1e293b" stroke-width="14" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M 440 260 L 432 315 L 412 340" stroke="#1e293b" stroke-width="14" stroke-linecap="round" stroke-linejoin="round"/>
-  <!-- Hands on Keyboard -->
-  <ellipse cx="388" cy="340" rx="7" ry="5" fill="#fed7aa"/>
-  <ellipse cx="412" cy="340" rx="7" ry="5" fill="#fed7aa"/>
+  <!-- Arms -->
+  <path d="M 385 210 L 395 260 L 412 282" stroke="#1e293b" stroke-width="13" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 465 210 L 455 260 L 438 282" stroke="#1e293b" stroke-width="13" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- Hands on Keyboard (animated typing) -->
+  <g class="hands-typing">
+    <ellipse cx="412" cy="282" rx="7" ry="5" fill="#fed7aa"/>
+    <ellipse cx="438" cy="282" rx="7" ry="5" fill="#fed7aa"/>
+  </g>
 
   <!-- ==================== LAPTOP & SCREEN ==================== -->
   <!-- Laptop Base & Keyboard -->
-  <polygon points="340,360 460,360 475,365 325,365" fill="#475569" stroke="#64748b" stroke-width="1"/>
-  <!-- Trackpad -->
-  <rect x="388" y="361" width="24" height="3" rx="1" fill="#334155"/>
+  <polygon points="360,300 490,300 505,305 345,305" fill="#475569" stroke="#64748b" stroke-width="1"/>
+  <rect x="412" y="301" width="26" height="3" rx="1" fill="#334155"/>
 
-  <!-- Laptop Open Lid (Angled slightly) -->
-  <rect x="330" y="270" width="140" height="90" rx="6" fill="#0f172a" stroke="#64748b" stroke-width="1.5"/>
-  <!-- Laptop Screen Display (Glowing with IDE code) -->
-  <rect class="screen-glow" x="336" y="276" width="128" height="78" rx="4" fill="#030712" stroke="#38bdf8" stroke-width="1"/>
+  <!-- Laptop Display Screen -->
+  <rect x="350" y="215" width="150" height="85" rx="6" fill="#0f172a" stroke="#64748b" stroke-width="1.5"/>
+  <rect class="screen-glow" x="356" y="221" width="138" height="73" rx="4" fill="#030712" stroke="#38bdf8" stroke-width="1"/>
 
-  <!-- IDE Window Details on Laptop Screen -->
-  <!-- Titlebar dots -->
-  <circle cx="344" cy="282" r="2" fill="#ef4444"/>
-  <circle cx="350" cy="282" r="2" fill="#f59e0b"/>
-  <circle cx="356" cy="282" r="2" fill="#10b981"/>
-  <!-- Editor Code Lines on Screen -->
-  <rect x="344" y="290" width="40" height="2.5" rx="1" fill="#38bdf8"/>
-  <rect x="388" y="290" width="25" height="2.5" rx="1" fill="#a855f7"/>
-  <rect x="350" y="296" width="55" height="2.5" rx="1" fill="#64748b"/>
-  <rect x="350" y="302" width="45" height="2.5" rx="1" fill="#10b981"/>
-  <rect x="360" y="308" width="60" height="2.5" rx="1" fill="#38bdf8"/>
-  <rect x="360" y="314" width="38" height="2.5" rx="1" fill="#f43f5e"/>
-  <rect x="350" y="320" width="20" height="2.5" rx="1" fill="#a855f7"/>
-  <!-- Blinking Cursor -->
-  <rect class="cursor-blink" x="373" y="320" width="3" height="4" fill="#38bdf8"/>
+  <!-- IDE Window Controls -->
+  <circle cx="365" cy="227" r="2.2" fill="#ef4444"/>
+  <circle cx="372" cy="227" r="2.2" fill="#f59e0b"/>
+  <circle cx="379" cy="227" r="2.2" fill="#10b981"/>
   
-  <!-- Mini Tech Logo on Laptop Lid Exterior (Center Apple/Linux style glow) -->
-  <path d="M 400 350 L 396 354 L 404 354 Z" fill="#38bdf8" opacity="0.6"/>
+  <!-- Active Code Lines on Screen -->
+  <rect x="365" y="235" width="45" height="2.5" rx="1" fill="#38bdf8"/>
+  <rect x="413" y="235" width="30" height="2.5" rx="1" fill="#a855f7"/>
+  <rect x="372" y="242" width="60" height="2.5" rx="1" fill="#64748b"/>
+  <rect x="372" y="249" width="48" height="2.5" rx="1" fill="#10b981"/>
+  <rect x="382" y="256" width="65" height="2.5" rx="1" fill="#38bdf8"/>
+  <rect x="382" y="263" width="42" height="2.5" rx="1" fill="#f43f5e"/>
+  <rect x="372" y="270" width="24" height="2.5" rx="1" fill="#a855f7"/>
+  <rect class="cursor-blink" x="398" y="270" width="3" height="4" fill="#38bdf8"/>
+
+  <!-- ==================== HOLOGRAPHIC TECH BEAMS ==================== -->
+  <g opacity="0.3" stroke="#38bdf8" stroke-width="1" stroke-dasharray="2,3">
+    <line x1="390" y1="220" x2="200" y2="85"/>
+    <line x1="380" y1="225" x2="150" y2="155"/>
+    <line x1="375" y1="230" x2="175" y2="230"/>
+    <line x1="425" y1="215" x2="425" y2="65"/>
+    <line x1="460" y1="220" x2="650" y2="85"/>
+    <line x1="470" y1="225" x2="700" y2="155"/>
+    <line x1="475" y1="230" x2="680" y2="230"/>
+  </g>
 
   <!-- ==================== FLOATING TECH VISUALIZATIONS ==================== -->
-  <!-- Light beams emerging from laptop to tech bubbles -->
-  <g opacity="0.25" stroke="#38bdf8" stroke-width="1" stroke-dasharray="2,3">
-    <line x1="380" y1="280" x2="220" y2="120"/>
-    <line x1="390" y1="278" x2="150" y2="200"/>
-    <line x1="400" y1="275" x2="280" y2="60"/>
-    <line x1="400" y1="275" x2="520" y2="60"/>
-    <line x1="410" y1="278" x2="650" y2="120"/>
-    <line x1="420" y1="280" x2="660" y2="220"/>
-    <line x1="400" y1="275" x2="400" y2="90"/>
+
+  <!-- 1. CENTER TOP: AI / LLM -->
+  <g class="badge-float-1" transform="translate(335, 25)">
+    <rect width="180" height="38" rx="19" fill="#1e1b4b" stroke="#a855f7" stroke-width="1.8" filter="url(#badgeShadow)"/>
+    <circle cx="22" cy="19" r="11" fill="#7c3aed"/>
+    <text x="22" y="23" text-anchor="middle" font-size="12">🧠</text>
+    <text x="42" y="24" fill="#f3e8ff" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="700">AI • LLM • Gemini • GPT</text>
   </g>
 
-  <!-- TECH BADGE 1: AI & LLM (Center Top) -->
-  <g class="badge-float-1" transform="translate(330, 45)">
-    <rect width="140" height="38" rx="19" fill="#1e1b4b" stroke="#a855f7" stroke-width="1.8" filter="url(#badgeShadow)"/>
-    <circle cx="20" cy="19" r="10" fill="#a855f7"/>
-    <text x="20" y="23" text-anchor="middle" font-size="12">🧠</text>
-    <text x="36" y="24" fill="#f3e8ff" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="700">AI • LLM • RAG</text>
+  <!-- 2. TOP LEFT: Python & FastAPI -->
+  <g class="badge-float-2" transform="translate(70, 65)">
+    <rect width="165" height="38" rx="19" fill="#0f172a" stroke="#38bdf8" stroke-width="1.8" filter="url(#badgeShadow)"/>
+    <circle cx="22" cy="19" r="11" fill="#0284c7"/>
+    <text x="22" y="23" text-anchor="middle" font-size="12">🐍</text>
+    <text x="42" y="24" fill="#e0f2fe" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="700">Python • FastAPI</text>
   </g>
 
-  <!-- TECH BADGE 2: Python & FastAPI (Top Left) -->
-  <g class="badge-float-2" transform="translate(140, 85)">
-    <rect width="145" height="38" rx="19" fill="#0f172a" stroke="#38bdf8" stroke-width="1.8" filter="url(#badgeShadow)"/>
-    <circle cx="20" cy="19" r="10" fill="#0284c7"/>
-    <text x="20" y="23" text-anchor="middle" font-size="12">⚡</text>
-    <text x="36" y="24" fill="#e0f2fe" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="700">Python • FastAPI</text>
+  <!-- 3. MID LEFT: Voice AI & WebRTC / Twilio -->
+  <g class="badge-float-4" transform="translate(30, 138)">
+    <rect width="180" height="38" rx="19" fill="#064e3b" stroke="#34d399" stroke-width="1.8" filter="url(#badgeShadow)"/>
+    <circle cx="22" cy="19" r="11" fill="#059669"/>
+    <text x="22" y="23" text-anchor="middle" font-size="12">🎙️</text>
+    <text x="42" y="24" fill="#ecfdf5" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="700">Voice AI • WebRTC</text>
   </g>
 
-  <!-- TECH BADGE 3: Next.js & React (Top Right) -->
-  <g class="badge-float-3" transform="translate(520, 85)">
-    <rect width="140" height="38" rx="19" fill="#0f172a" stroke="#60a5fa" stroke-width="1.8" filter="url(#badgeShadow)"/>
-    <circle cx="20" cy="19" r="10" fill="#1e293b"/>
-    <text x="20" y="23" text-anchor="middle" font-size="12">⚛️</text>
-    <text x="36" y="24" fill="#dbeafe" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="700">Next.js • React</text>
+  <!-- 4. LOW LEFT: Redis & BullMQ -->
+  <g class="badge-float-6" transform="translate(65, 212)">
+    <rect width="165" height="38" rx="19" fill="#450a0a" stroke="#f87171" stroke-width="1.8" filter="url(#badgeShadow)"/>
+    <circle cx="22" cy="19" r="11" fill="#dc2626"/>
+    <text x="22" y="23" text-anchor="middle" font-size="12">⚡</text>
+    <text x="42" y="24" fill="#fee2e2" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="700">Redis • BullMQ</text>
   </g>
 
-  <!-- TECH BADGE 4: Voice AI & WebRTC / Twilio (Far Left) -->
-  <g class="badge-float-4" transform="translate(70, 175)">
-    <rect width="165" height="38" rx="19" fill="#064e3b" stroke="#34d399" stroke-width="1.8" filter="url(#badgeShadow)"/>
-    <circle cx="20" cy="19" r="10" fill="#10b981"/>
-    <text x="20" y="23" text-anchor="middle" font-size="12">🎙️</text>
-    <text x="36" y="24" fill="#ecfdf5" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="700">Voice AI • WebRTC</text>
+  <!-- 5. TOP RIGHT: Next.js & React -->
+  <g class="badge-float-3" transform="translate(615, 65)">
+    <rect width="165" height="38" rx="19" fill="#0f172a" stroke="#60a5fa" stroke-width="1.8" filter="url(#badgeShadow)"/>
+    <circle cx="22" cy="19" r="11" fill="#1e293b"/>
+    <text x="22" y="23" text-anchor="middle" font-size="12">⚛️</text>
+    <text x="42" y="24" fill="#dbeafe" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="700">Next.js • React</text>
   </g>
 
-  <!-- TECH BADGE 5: TypeScript & Node.js (Far Right) -->
-  <g class="badge-float-5" transform="translate(575, 175)">
-    <rect width="160" height="38" rx="19" fill="#172554" stroke="#3b82f6" stroke-width="1.8" filter="url(#badgeShadow)"/>
-    <circle cx="20" cy="19" r="10" fill="#1d4ed8"/>
-    <text x="20" y="23" text-anchor="middle" font-size="12">🔷</text>
-    <text x="36" y="24" fill="#eff6ff" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="700">TypeScript • Node</text>
+  <!-- 6. MID RIGHT: TypeScript & Node.js -->
+  <g class="badge-float-5" transform="translate(640, 138)">
+    <rect width="175" height="38" rx="19" fill="#172554" stroke="#3b82f6" stroke-width="1.8" filter="url(#badgeShadow)"/>
+    <circle cx="22" cy="19" r="11" fill="#1d4ed8"/>
+    <text x="22" y="23" text-anchor="middle" font-size="12">🔷</text>
+    <text x="42" y="24" fill="#eff6ff" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="700">TypeScript • Node</text>
   </g>
 
-  <!-- TECH BADGE 6: Redis & BullMQ (Mid Left Low) -->
-  <g class="badge-float-6" transform="translate(110, 260)">
-    <rect width="145" height="36" rx="18" fill="#450a0a" stroke="#f87171" stroke-width="1.5" filter="url(#badgeShadow)"/>
-    <circle cx="18" cy="18" r="9" fill="#ef4444"/>
-    <text x="18" y="22" text-anchor="middle" font-size="11">⚡</text>
-    <text x="34" y="23" fill="#fee2e2" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="700">Redis • BullMQ</text>
+  <!-- 7. LOW RIGHT: MongoDB & PostgreSQL -->
+  <g class="badge-float-7" transform="translate(615, 212)">
+    <rect width="175" height="38" rx="19" fill="#022c22" stroke="#4ade80" stroke-width="1.8" filter="url(#badgeShadow)"/>
+    <circle cx="22" cy="19" r="11" fill="#16a34a"/>
+    <text x="22" y="23" text-anchor="middle" font-size="12">🍃</text>
+    <text x="42" y="24" fill="#dcfce7" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="700">MongoDB • SQL</text>
   </g>
 
-  <!-- TECH BADGE 7: MongoDB & PostgreSQL (Mid Right Low) -->
-  <g class="badge-float-7" transform="translate(555, 260)">
-    <rect width="155" height="36" rx="18" fill="#022c22" stroke="#4ade80" stroke-width="1.5" filter="url(#badgeShadow)"/>
-    <circle cx="18" cy="18" r="9" fill="#16a34a"/>
-    <text x="18" y="22" text-anchor="middle" font-size="11">🍃</text>
-    <text x="34" y="23" fill="#dcfce7" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="700">MongoDB • SQL</text>
-  </g>
-
-  <!-- Floating Particles & Orbiting Stars -->
-  <circle class="badge-float-1" cx="300" cy="140" r="3" fill="#38bdf8" opacity="0.8"/>
-  <circle class="badge-float-3" cx="500" cy="140" r="2.5" fill="#a855f7" opacity="0.8"/>
-  <circle class="badge-float-2" cx="260" cy="220" r="2" fill="#34d399" opacity="0.7"/>
-  <circle class="badge-float-5" cx="540" cy="220" r="3" fill="#60a5fa" opacity="0.7"/>
-  <circle class="badge-float-4" cx="380" cy="120" r="2" fill="#fbbf24" opacity="0.8"/>
+  <!-- Ambient Glowing Tech Particles -->
+  <circle class="badge-float-1" cx="300" cy="120" r="3" fill="#38bdf8" opacity="0.8"/>
+  <circle class="badge-float-3" cx="550" cy="120" r="2.5" fill="#a855f7" opacity="0.8"/>
+  <circle class="badge-float-2" cx="240" cy="180" r="2.5" fill="#34d399" opacity="0.7"/>
+  <circle class="badge-float-5" cx="610" cy="180" r="3" fill="#60a5fa" opacity="0.7"/>
+  <circle class="badge-float-4" cx="360" cy="100" r="2" fill="#fbbf24" opacity="0.8"/>
+  <circle class="badge-float-6" cx="490" cy="100" r="2" fill="#ec4899" opacity="0.8"/>
 </svg>
