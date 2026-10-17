@@ -9,7 +9,7 @@
 
   <!-- Dynamic Typing Subtitle -->
   <a href="https://satishchaubey.vercel.app" target="_blank">
-    <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=20&pause=1200&color=38BDF8&center=true&vCenter=true&width=650&height=45&lines=AI+%26+ML+Engineer+%E2%9A%A1+LLM+Specialist;Building+Real-Time+Voice+AI+(WebRTC+%2B+Twilio);Full-Stack+%26+Microservices+Architect;Scaling+Platforms+to+20%2C000%2B+Daily+Txns" alt="Typing SVG" />
+    <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=20&pause=1200&color=38BDF8&center=true&vCenter=true&width=650&height=45&lines=AI+%26+ML+Engineer+%E2%9A%A1+LLM+Specialist;Building+Real-Time+Voice+AI+(WebRTC+%2B+Twilio);Full-Stack+%26+Microservices+Architect;High-Performance+Scalable+Architectures" alt="Typing SVG" />
   </a>
 
   <p align="center">
@@ -54,8 +54,8 @@ I am an **AI & ML Engineer and Full Stack Architect** with **3+ years of product
 - 🔭 **Current Position**: Software Engineer at **Plutos One Pvt. Ltd.** (Feb 2024 – Present).
 - 🧠 **AI & LLM Workflows**: Designing multi-agent pipelines, prompt chaining, automated call monitoring, and intelligent conversational agents (*Visa Chatbot*, *CSC Chatbot*).
 - 🎙️ **Real-Time Voice Systems**: Engineering low-latency voice pipelines with **FastAPI, WebRTC, Twilio, Whisper (STT), and TTS**.
-- ⚡ **Scale & Performance**: Built services for the CSC Bill Payment Platform handling **20,000+ transactions/day** with **20% performance improvement** via Redis caching and microservices optimization.
-- 💳 **Fintech & Banking**: Hands-on with **Central Bank of India (Saarthi)**, **SVC Bill Pay (10,000+ txns/day)**, and secure payment integrations (**PayU, Razorpay**).
+- ⚡ **Scale & Performance**: Architected high-availability services for the CSC Bill Payment Platform with substantial throughput optimizations via Redis caching and microservices tuning.
+- 💳 **Fintech & Banking**: Hands-on with **Central Bank of India (Saarthi)**, **SVC Bill Pay Platform**, and secure payment integrations (**PayU, Razorpay**).
 - 🌐 **Frontend Excellence**: Architected 30+ responsive, production-ready enterprise pages using **Next.js (App & Page Router)**, **React.js**, **TypeScript**, and **Tailwind CSS**.
 
 ---
@@ -86,7 +86,7 @@ flowchart LR
     class User,AudioOut primary;
 ```
 
-#### 🔹 2. High-Throughput Fintech & Payment Engine (20,000+ Daily Txns)
+#### 🔹 2. High-Throughput Fintech & Payment Engine
 
 ```mermaid
 flowchart TD
@@ -186,10 +186,10 @@ flowchart TD
   <tr>
     <td width="50%" valign="top">
       <h3>💳 CSC & SVC Bill Payment Platforms</h3>
-      <p>Mission-critical fintech infrastructure processing <strong>20,000+ daily transactions</strong> for utility bill payments.</p>
+      <p>Mission-critical fintech infrastructure powering nationwide utility bill payment workflows.</p>
       <ul>
         <li>Engineered full-stack services using <strong>Node.js, Express, MongoDB, and Redis</strong>.</li>
-        <li>Achieved a <strong>20% throughput boost</strong> using Redis query caching, connection pooling, and payload compression.</li>
+        <li>Achieved substantial throughput optimization using Redis query caching, connection pooling, and payload compression.</li>
         <li>Bulletproof payment integrations with <strong>PayU and Razorpay</strong> with robust webhook reconciliation.</li>
       </ul>
       <p>
@@ -253,7 +253,7 @@ timeline
     title Professional Journey & Engineering Evolution
     2022 - 2023 : Techpile Technology Pvt. Ltd. : MERN Stack Intern : Full stack development with MongoDB, Express, React, Node.js
     2023 - 2024 : Speqto Technology Pvt. Ltd. : Front-End Developer : Next.js, React, Web3 & BSC Smart Contract Wallet Integrations
-    2024 - Present : Plutos One Pvt. Ltd. : Software Engineer (AI & Full Stack) : Production LLM Chatbots, Real-time Voice AI, CSC Bill Pay (20k+ daily txns), Central Bank Saarthi
+    2024 - Present : Plutos One Pvt. Ltd. : Software Engineer (AI & Full Stack) : Production LLM Chatbots, Real-time Voice AI, CSC Bill Pay, Central Bank Saarthi
 ```
 
 ---
