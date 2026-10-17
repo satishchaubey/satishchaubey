@@ -16,7 +16,7 @@
 
     <!-- Drop Shadow Filter for Floating Badges -->
     <filter id="badgeShadow" x="-20%" y="-20%" width="140%" height="140%">
-      <feDropShadow dx="0" dy="4" stdDeviation="5" flood-color="#000000" flood-opacity="0.7"/>
+      <feDropShadow dx="0" dy="4" stdDeviation="5" flood-color="#000000" flood-opacity="0.8"/>
     </filter>
 
     <!-- Ambient Glow Filter -->
@@ -25,7 +25,7 @@
     </filter>
 
     <filter id="laptopGlow" x="-30%" y="-30%" width="160%" height="160%">
-      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feGaussianBlur stdDeviation="6" result="blur"/>
       <feMerge>
         <feMergeNode in="blur"/>
         <feMergeNode in="SourceGraphic"/>
@@ -37,7 +37,7 @@
   <rect x="2" y="2" width="846" height="376" rx="16" fill="url(#devBg)" stroke="url(#devBorder)" stroke-width="1.5"/>
 
   <!-- Background Cyber Grid Lines -->
-  <g opacity="0.07" stroke="#38bdf8" stroke-width="1">
+  <g opacity="0.06" stroke="#38bdf8" stroke-width="1">
     <line x1="0" y1="75" x2="850" y2="75"/>
     <line x1="0" y1="150" x2="850" y2="150"/>
     <line x1="0" y1="225" x2="850" y2="225"/>
@@ -48,7 +48,7 @@
     <line x1="680" y1="0" x2="680" y2="380"/>
   </g>
 
-  <!-- Ambient Light from Behind Desk -->
+  <!-- Ambient Light Orbs -->
   <circle cx="425" cy="220" r="140" fill="#38bdf8" opacity="0.12" filter="url(#ambientLight)"/>
   <circle cx="425" cy="150" r="90" fill="#a855f7" opacity="0.12" filter="url(#ambientLight)"/>
 
@@ -62,10 +62,10 @@
   <rect x="250" y="280" width="20" height="26" rx="4" fill="#0284c7"/>
   <path d="M 270 286 C 278 286 278 298 270 298" stroke="#0284c7" stroke-width="3" fill="none"/>
   <path d="M 256 274 Q 259 268 256 262" stroke="#94a3b8" stroke-width="1.2" stroke-linecap="round" opacity="0.4">
-    <animate attributeName="opacity" values="0.2;0.6;0.2" dur="2s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0.2;0.7;0.2" dur="2s" repeatCount="indefinite"/>
   </path>
   <path d="M 263 274 Q 266 268 263 262" stroke="#94a3b8" stroke-width="1.2" stroke-linecap="round" opacity="0.4">
-    <animate attributeName="opacity" values="0.6;0.2;0.6" dur="2s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0.7;0.2;0.7" dur="2s" repeatCount="indefinite"/>
   </path>
 
   <!-- Desk Mini Plant -->
@@ -136,86 +136,84 @@
     <animate attributeName="opacity" values="1; 0; 1" dur="0.9s" repeatCount="indefinite"/>
   </rect>
 
-  <!-- Mini Tech Stack Icons Inside Laptop IDE -->
-  <g transform="translate(440, 275)" opacity="0.9">
-    <rect width="48" height="15" rx="3" fill="#1e1b4b" stroke="#818cf8" stroke-width="0.8"/>
-    <text x="24" y="11" text-anchor="middle" fill="#c7d2fe" font-family="-apple-system, sans-serif" font-size="8" font-weight="700">⚡ AI • API</text>
-  </g>
+  <!-- Mini Tech Stack Tag on Laptop -->
+  <rect x="432" y="273" width="56" height="16" rx="3" fill="#1e1b4b" stroke="#818cf8" stroke-width="0.8"/>
+  <text x="460" y="284" text-anchor="middle" fill="#c7d2fe" font-family="-apple-system, sans-serif" font-size="8.5" font-weight="700">⚡ AI • APIS</text>
 
   <!-- ==================== HOLOGRAPHIC TECH BEAMS ==================== -->
-  <g opacity="0.3" stroke="#38bdf8" stroke-width="1" stroke-dasharray="2,3">
-    <line x1="390" y1="220" x2="200" y2="85"/>
-    <line x1="380" y1="225" x2="150" y2="155"/>
-    <line x1="375" y1="230" x2="175" y2="230"/>
-    <line x1="425" y1="215" x2="425" y2="65"/>
-    <line x1="460" y1="220" x2="650" y2="85"/>
-    <line x1="470" y1="225" x2="700" y2="155"/>
-    <line x1="475" y1="230" x2="680" y2="230"/>
+  <g opacity="0.35" stroke="#38bdf8" stroke-width="1" stroke-dasharray="3,3">
+    <line x1="390" y1="220" x2="175" y2="83"/>
+    <line x1="380" y1="225" x2="142" y2="153"/>
+    <line x1="375" y1="230" x2="175" y2="223"/>
+    <line x1="425" y1="215" x2="425" y2="66"/>
+    <line x1="460" y1="220" x2="675" y2="83"/>
+    <line x1="470" y1="225" x2="707" y2="153"/>
+    <line x1="475" y1="230" x2="680" y2="223"/>
   </g>
 
-  <!-- ==================== FLOATING TECH VISUALIZATIONS (SMIL ANIMATED) ==================== -->
+  <!-- ==================== 7 FLOATING TECH BADGES ==================== -->
 
-  <!-- 1. CENTER TOP: AI / LLM -->
-  <g transform="translate(325, 25)">
-    <animateTransform attributeName="transform" type="translate" values="325,25; 325,17; 325,25" dur="3.8s" repeatCount="indefinite"/>
-    <rect width="200" height="38" rx="19" fill="#1e1b4b" stroke="#a855f7" stroke-width="1.8" filter="url(#badgeShadow)"/>
-    <circle cx="22" cy="19" r="11" fill="#7c3aed"/>
-    <text x="22" y="23" text-anchor="middle" font-size="12">🧠</text>
-    <text x="42" y="24" fill="#f3e8ff" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="700">AI • LLMs • Gemini • GPT</text>
+  <!-- 1. CENTER TOP: AI • LLM • Gemini • GPT -->
+  <g>
+    <animateTransform attributeName="transform" type="translate" values="0,0; 0,-8; 0,0" dur="3.8s" repeatCount="indefinite"/>
+    <rect x="315" y="30" width="220" height="36" rx="18" fill="#1e1b4b" stroke="#a855f7" stroke-width="1.8" filter="url(#badgeShadow)"/>
+    <circle cx="335" cy="48" r="11" fill="#7c3aed"/>
+    <text x="335" y="52" text-anchor="middle" font-size="12">🧠</text>
+    <text x="355" y="53" fill="#f3e8ff" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12.5" font-weight="700">AI • LLMs • Gemini • GPT</text>
   </g>
 
-  <!-- 2. TOP LEFT: Python & FastAPI -->
-  <g transform="translate(60, 65)">
-    <animateTransform attributeName="transform" type="translate" values="60,65; 60,55; 60,65" dur="3.4s" repeatCount="indefinite"/>
-    <rect width="175" height="38" rx="19" fill="#0f172a" stroke="#38bdf8" stroke-width="1.8" filter="url(#badgeShadow)"/>
-    <circle cx="22" cy="19" r="11" fill="#0284c7"/>
-    <text x="22" y="23" text-anchor="middle" font-size="12">🐍</text>
-    <text x="42" y="24" fill="#e0f2fe" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="700">Python • FastAPI</text>
+  <!-- 2. TOP LEFT: Python • FastAPI -->
+  <g>
+    <animateTransform attributeName="transform" type="translate" values="0,0; 0,-10; 0,0" dur="3.4s" repeatCount="indefinite"/>
+    <rect x="85" y="65" width="180" height="36" rx="18" fill="#0f172a" stroke="#38bdf8" stroke-width="1.8" filter="url(#badgeShadow)"/>
+    <circle cx="105" cy="83" r="11" fill="#0284c7"/>
+    <text x="105" y="87" text-anchor="middle" font-size="12">🐍</text>
+    <text x="125" y="88" fill="#e0f2fe" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12.5" font-weight="700">Python • FastAPI</text>
   </g>
 
-  <!-- 3. MID LEFT: Voice AI & WebRTC / Twilio -->
-  <g transform="translate(30, 138)">
-    <animateTransform attributeName="transform" type="translate" values="30,138; 30,128; 30,138" dur="4.2s" repeatCount="indefinite"/>
-    <rect width="185" height="38" rx="19" fill="#064e3b" stroke="#34d399" stroke-width="1.8" filter="url(#badgeShadow)"/>
-    <circle cx="22" cy="19" r="11" fill="#059669"/>
-    <text x="22" y="23" text-anchor="middle" font-size="12">🎙️</text>
-    <text x="42" y="24" fill="#ecfdf5" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="700">Voice AI • WebRTC</text>
+  <!-- 3. TOP RIGHT: Next.js • React -->
+  <g>
+    <animateTransform attributeName="transform" type="translate" values="0,0; 0,-9; 0,0" dur="3.6s" repeatCount="indefinite"/>
+    <rect x="585" y="65" width="180" height="36" rx="18" fill="#0f172a" stroke="#60a5fa" stroke-width="1.8" filter="url(#badgeShadow)"/>
+    <circle cx="605" cy="83" r="11" fill="#1e293b"/>
+    <text x="605" y="87" text-anchor="middle" font-size="12">⚛️</text>
+    <text x="625" y="88" fill="#dbeafe" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12.5" font-weight="700">Next.js • React</text>
   </g>
 
-  <!-- 4. LOW LEFT: Redis & BullMQ -->
-  <g transform="translate(65, 212)">
-    <animateTransform attributeName="transform" type="translate" values="65,212; 65,204; 65,212" dur="3.6s" repeatCount="indefinite"/>
-    <rect width="170" height="38" rx="19" fill="#450a0a" stroke="#f87171" stroke-width="1.8" filter="url(#badgeShadow)"/>
-    <circle cx="22" cy="19" r="11" fill="#dc2626"/>
-    <text x="22" y="23" text-anchor="middle" font-size="12">⚡</text>
-    <text x="42" y="24" fill="#fee2e2" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="700">Redis • BullMQ</text>
+  <!-- 4. MID LEFT: Voice AI • WebRTC • Twilio -->
+  <g>
+    <animateTransform attributeName="transform" type="translate" values="0,0; 0,-7; 0,0" dur="4.2s" repeatCount="indefinite"/>
+    <rect x="45" y="135" width="195" height="36" rx="18" fill="#064e3b" stroke="#34d399" stroke-width="1.8" filter="url(#badgeShadow)"/>
+    <circle cx="65" cy="153" r="11" fill="#059669"/>
+    <text x="65" y="157" text-anchor="middle" font-size="12">🎙️</text>
+    <text x="85" y="158" fill="#ecfdf5" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="700">Voice AI • WebRTC</text>
   </g>
 
-  <!-- 5. TOP RIGHT: Next.js & React -->
-  <g transform="translate(615, 65)">
-    <animateTransform attributeName="transform" type="translate" values="615,65; 615,55; 615,65" dur="3.6s" repeatCount="indefinite"/>
-    <rect width="170" height="38" rx="19" fill="#0f172a" stroke="#60a5fa" stroke-width="1.8" filter="url(#badgeShadow)"/>
-    <circle cx="22" cy="19" r="11" fill="#1e293b"/>
-    <text x="22" y="23" text-anchor="middle" font-size="12">⚛️</text>
-    <text x="42" y="24" fill="#dbeafe" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="700">Next.js • React</text>
+  <!-- 5. MID RIGHT: TypeScript • Node.js -->
+  <g>
+    <animateTransform attributeName="transform" type="translate" values="0,0; 0,-8; 0,0" dur="4.0s" repeatCount="indefinite"/>
+    <rect x="610" y="135" width="195" height="36" rx="18" fill="#172554" stroke="#3b82f6" stroke-width="1.8" filter="url(#badgeShadow)"/>
+    <circle cx="630" cy="153" r="11" fill="#1d4ed8"/>
+    <text x="630" y="157" text-anchor="middle" font-size="12">🔷</text>
+    <text x="650" y="158" fill="#eff6ff" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="700">TypeScript • Node</text>
   </g>
 
-  <!-- 6. MID RIGHT: TypeScript & Node.js -->
-  <g transform="translate(635, 138)">
-    <animateTransform attributeName="transform" type="translate" values="635,138; 635,128; 635,138" dur="4.0s" repeatCount="indefinite"/>
-    <rect width="180" height="38" rx="19" fill="#172554" stroke="#3b82f6" stroke-width="1.8" filter="url(#badgeShadow)"/>
-    <circle cx="22" cy="19" r="11" fill="#1d4ed8"/>
-    <text x="22" y="23" text-anchor="middle" font-size="12">🔷</text>
-    <text x="42" y="24" fill="#eff6ff" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="700">TypeScript • Node</text>
+  <!-- 6. LOWER LEFT: Redis • BullMQ -->
+  <g>
+    <animateTransform attributeName="transform" type="translate" values="0,0; 0,-6; 0,0" dur="3.5s" repeatCount="indefinite"/>
+    <rect x="85" y="205" width="180" height="36" rx="18" fill="#450a0a" stroke="#f87171" stroke-width="1.8" filter="url(#badgeShadow)"/>
+    <circle cx="105" cy="223" r="11" fill="#dc2626"/>
+    <text x="105" y="227" text-anchor="middle" font-size="12">⚡</text>
+    <text x="125" y="228" fill="#fee2e2" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12.5" font-weight="700">Redis • BullMQ</text>
   </g>
 
-  <!-- 7. LOW RIGHT: MongoDB & PostgreSQL -->
-  <g transform="translate(615, 212)">
-    <animateTransform attributeName="transform" type="translate" values="615,212; 615,204; 615,212" dur="3.5s" repeatCount="indefinite"/>
-    <rect width="180" height="38" rx="19" fill="#022c22" stroke="#4ade80" stroke-width="1.8" filter="url(#badgeShadow)"/>
-    <circle cx="22" cy="19" r="11" fill="#16a34a"/>
-    <text x="22" y="23" text-anchor="middle" font-size="12">🍃</text>
-    <text x="42" y="24" fill="#dcfce7" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="700">MongoDB • SQL</text>
+  <!-- 7. LOWER RIGHT: MongoDB • PostgreSQL -->
+  <g>
+    <animateTransform attributeName="transform" type="translate" values="0,0; 0,-7; 0,0" dur="3.9s" repeatCount="indefinite"/>
+    <rect x="585" y="205" width="195" height="36" rx="18" fill="#022c22" stroke="#4ade80" stroke-width="1.8" filter="url(#badgeShadow)"/>
+    <circle cx="605" cy="223" r="11" fill="#16a34a"/>
+    <text x="605" y="227" text-anchor="middle" font-size="12">🍃</text>
+    <text x="625" y="228" fill="#dcfce7" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="700">MongoDB • PostgreSQL</text>
   </g>
 
   <!-- Ambient Floating Tech Sparkles -->
@@ -225,10 +223,10 @@
   <circle cx="550" cy="120" r="2.5" fill="#a855f7">
     <animate attributeName="opacity" values="0.3;1;0.3" dur="2.5s" repeatCount="indefinite"/>
   </circle>
-  <circle cx="240" cy="180" r="2.5" fill="#34d399">
+  <circle cx="280" cy="180" r="2.5" fill="#34d399">
     <animate attributeName="opacity" values="0.4;0.9;0.4" dur="1.8s" repeatCount="indefinite"/>
   </circle>
-  <circle cx="610" cy="180" r="3" fill="#60a5fa">
+  <circle cx="570" cy="180" r="3" fill="#60a5fa">
     <animate attributeName="opacity" values="0.3;1;0.3" dur="2.2s" repeatCount="indefinite"/>
   </circle>
 </svg>
