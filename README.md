@@ -261,45 +261,76 @@ timeline
 ### 📊 GitHub Activity & Statistics
 
 <div align="center">
-  <table border="0">
-    <tr>
-      <td>
-        <img height="180em" src="https://github-readme-stats.vercel.app/api?username=satishchaubey&show_icons=true&theme=tokyonight&include_all_commits=true&count_private=true&hide_border=true" alt="Satish's GitHub Stats" />
+
+  <table border="0" style="border: none; background: transparent;">
+    <tr style="border: none; background: transparent;">
+      <td align="center" style="border: none; padding: 10px;">
+        <a href="https://github.com/satishchaubey">
+          <img height="185em" src="https://github-readme-stats.vercel.app/api?username=satishchaubey&show_icons=true&hide_border=true&hide_rank=true&bg_color=0d1117&title_color=58a6ff&icon_color=38bdf8&text_color=c9d1d9" alt="Satish's GitHub Stats" />
+        </a>
       </td>
-      <td>
-        <img height="180em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=satishchaubey&layout=compact&theme=tokyonight&hide_border=true" alt="Top Languages" />
+      <td align="center" style="border: none; padding: 10px;">
+        <a href="https://github.com/satishchaubey">
+          <img height="185em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=satishchaubey&layout=compact&hide_border=true&bg_color=0d1117&title_color=58a6ff&text_color=c9d1d9" alt="Top Languages" />
+        </a>
       </td>
     </tr>
   </table>
 
-  <br/>
-
-  <a href="https://github.com/satishchaubey">
-    <img src="https://github-readme-streak-stats.herokuapp.com/?user=satishchaubey&theme=tokyonight&hide_border=true" alt="GitHub Streak" />
-  </a>
 </div>
 
 ---
 
 ### 🤝 Let's Connect & Collaborate
 
-Whether you're looking to discuss **Production AI / LLM Workflows**, **Real-Time Voice Architecture**, or **High-Scale Web Engineering**, my inbox is always open!
-
 <div align="center">
 
-  <a href="https://satishchaubey.vercel.app" target="_blank">
-    <img src="https://img.shields.io/badge/🌐_Portfolio-satishchaubey.vercel.app-00D2FF?style=for-the-badge" alt="Portfolio" />
-  </a>
-  &nbsp;
-  <a href="https://linkedin.com/in/satish-chaubey" target="_blank">
-    <img src="https://img.shields.io/badge/👔_LinkedIn-Satish_Chaubey-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" />
-  </a>
-  &nbsp;
+  <!-- Connect Call-to-Action Banner -->
   <a href="mailto:satishchaubey02@gmail.com">
-    <img src="https://img.shields.io/badge/✉️_Email-satishchaubey02@gmail.com-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="Email" />
+    <img src="./footer.svg" alt="Let's Connect Banner" width="100%" />
   </a>
 
   <br/><br/>
+
+  <!-- Clean 4-Column Interactive Contact Grid -->
+  <table border="0" style="border: none; width: 100%; max-width: 850px;">
+    <tr align="center" style="border: none;">
+      <td width="25%" style="padding: 16px; border: 1px solid #30363d; border-radius: 8px;">
+        <a href="https://linkedin.com/in/satish-chaubey" target="_blank">
+          <img src="https://skillicons.dev/icons?i=linkedin" width="44" height="44" alt="LinkedIn" /><br/><br/>
+          <strong>LinkedIn</strong><br/>
+          <sub style="color: #8b949e;">Career &amp; Network</sub><br/><br/>
+          <img src="https://img.shields.io/badge/Connect-0A66C2?style=flat-square&logo=linkedin&logoColor=white" alt="Connect on LinkedIn" />
+        </a>
+      </td>
+      <td width="25%" style="padding: 16px; border: 1px solid #30363d; border-radius: 8px;">
+        <a href="https://satishchaubey.vercel.app" target="_blank">
+          <img src="https://skillicons.dev/icons?i=vercel" width="44" height="44" alt="Portfolio" /><br/><br/>
+          <strong>Portfolio</strong><br/>
+          <sub style="color: #8b949e;">Live Demos &amp; Work</sub><br/><br/>
+          <img src="https://img.shields.io/badge/Visit_Site-000000?style=flat-square&logo=vercel&logoColor=white" alt="Visit Portfolio" />
+        </a>
+      </td>
+      <td width="25%" style="padding: 16px; border: 1px solid #30363d; border-radius: 8px;">
+        <a href="mailto:satishchaubey02@gmail.com">
+          <img src="https://skillicons.dev/icons?i=gmail" width="44" height="44" alt="Email" /><br/><br/>
+          <strong>Direct Email</strong><br/>
+          <sub style="color: #8b949e;">Opportunities &amp; Chat</sub><br/><br/>
+          <img src="https://img.shields.io/badge/Send_Email-EA4335?style=flat-square&logo=gmail&logoColor=white" alt="Send Email" />
+        </a>
+      </td>
+      <td width="25%" style="padding: 16px; border: 1px solid #30363d; border-radius: 8px;">
+        <a href="https://github.com/satishchaubey">
+          <img src="https://skillicons.dev/icons?i=github" width="44" height="44" alt="GitHub" /><br/><br/>
+          <strong>GitHub</strong><br/>
+          <sub style="color: #8b949e;">Repos &amp; Open Source</sub><br/><br/>
+          <img src="https://img.shields.io/badge/Follow-181717?style=flat-square&logo=github&logoColor=white" alt="Follow on GitHub" />
+        </a>
+      </td>
+    </tr>
+  </table>
+
+  <br/>
 
   <sub>⚡ <i>"Building resilient, low-latency architectures that bridge cutting-edge AI models with production-grade reliability."</i></sub>
 
