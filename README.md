@@ -45,6 +45,11 @@
 
 </div>
 
+<div align="center">
+  <!-- Animated Developer with Floating Tech Stack -->
+  <img src="./developer.svg" alt="Satish Kumar Chaubey - AI & Systems Developer" width="100%" />
+</div>
+
 ---
 
 ### 👨‍💻 Executive Summary
