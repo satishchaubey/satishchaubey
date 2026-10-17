@@ -65,67 +65,230 @@ I am an **AI & ML Engineer and Full Stack Architect** with **3+ years of product
 
 ---
 
-### 🏛️ Visual System Architecture Blueprints
+### 📐 Production System Architecture & Project Charts
 
-#### 🔹 1. Real-Time Conversational Voice AI Pipeline
+Detailed architectural flow diagrams for production AI systems and scalable enterprise platforms directly from my portfolio ([satishchaubey.vercel.app](https://satishchaubey.vercel.app)):
 
-```mermaid
-flowchart LR
-    User([🎙️ User Audio]) -->|Audio Stream| MediaServer[⚡ Twilio / WebRTC Gateway]
-    MediaServer -->|Chunked Audio| STT[🗣️ Whisper Speech-to-Text]
-    STT -->|Transcribed Text| LLM[🧠 LLM Reasoning Engine<br/>FastAPI • GPT-4 / Gemini / Claude]
-    
-    subgraph ContextEngine ["Intelligent Context Layer"]
-        LLM -. RAG & History .-> VectorStore[(📚 Vector Knowledge & Cache)]
-        LLM -. Structured Tools .-> APIServices[⚙️ Enterprise APIs]
-    end
-
-    LLM -->|Streamed Tokens| TTS[🔊 Low-Latency TTS Synthesis]
-    TTS -->|Synthesized Audio Stream| AudioOut([🎧 Real-time User Audio Output])
-
-    classDef primary fill:#0f172a,stroke:#38bdf8,stroke-width:2px,color:#f8fafc;
-    classDef ai fill:#1e1b4b,stroke:#a855f7,stroke-width:2px,color:#f3e8ff;
-    classDef media fill:#022c22,stroke:#10b981,stroke-width:2px,color:#ecfdf5;
-    class LLM,ContextEngine,VectorStore,APIServices ai;
-    class MediaServer,STT,TTS media;
-    class User,AudioOut primary;
-```
-
-#### 🔹 2. High-Throughput Fintech & Payment Engine
+<details open>
+<summary><strong>🎙️ 1. Gemini Live API — Real-Time Multimodal Voice, Video &amp; Audio Streaming Engine</strong></summary>
+<br/>
+<blockquote>Architected low-latency streaming pipeline enabling continuous bi-directional voice, video, and text interaction with Multimodal AI models. Features real-time PCM audio processing, dynamic interruption handling, function calling, and live audio synthesis.</blockquote>
 
 ```mermaid
-flowchart TD
-    Client([📱 Web & Mobile Clients / Next.js]) -->|HTTPS / SSL| APIGateway[🛡️ Cloudflare & API Gateway<br/>Rate Limiting • JWT Auth]
-    
-    subgraph MicroservicesCluster ["Microservices Cluster"]
-        APIGateway -->|REST / Async| BillPaySvc[⚡ Bill Payment Service<br/>FastAPI & Node.js]
-        APIGateway -->|Event Stream| BankingSvc[🏦 Core Banking Service<br/>Saarthi CBI Platform]
+graph TD
+    subgraph ClientLayer["1. Multimodal Client Layer"]
+        A1["Text Prompts & User Interrupts"]
+        A2["Live Audio Input (PCM Stream)"]
+        A3["Live Video Input"]
     end
 
-    subgraph CachingLayer ["High-Speed Caching & Message Queue"]
-        BillPaySvc <-->|Sub-5ms Lookup| RedisCache[(⚡ Redis Cache & Sessions)]
-        BillPaySvc -->|Job Producer| BullMQQueue[📬 BullMQ Async Job Queue]
+    subgraph TransportLayer["2. Real-Time Communication Layer"]
+        B1["Secure Session Authentication"]
+        B2["Bi-directional WebSockets"]
+        B3["Low-Latency Interruption Handler"]
     end
 
-    subgraph PaymentFlow ["Secure Payment Gateways"]
-        BillPaySvc -->|Signed Webhooks| PayU[💳 PayU Gateway]
-        BillPaySvc -->|Direct Checkout| Razorpay[💳 Razorpay Gateway]
+    subgraph CoreEngine["3. Multimodal AI Orchestration"]
+        C1["Real-Time Multimodal AI (Gemini Live)"]
+        C2["Context & Conversation Engine"]
+        C3["Tool & Function Calling Engine"]
+        C4["External Information Retrieval"]
     end
 
-    subgraph Persistence ["Persistence Layer"]
-        BullMQQueue -->|Background Worker| DB[(🍃 MongoDB / 🐘 PostgreSQL)]
-        RedisCache -. Daily Sync .-> DB
+    subgraph ResponseSynthesis["4. Client Output & Audio Stream"]
+        D1["Dynamic Tool Result Display"]
+        D2["Real-Time Audio Synthesis (TTS)"]
+        D3["Instant Interruption Flushing"]
     end
 
-    classDef edge fill:#0f172a,stroke:#38bdf8,stroke-width:2px,color:#f8fafc;
-    classDef svc fill:#1e1b4b,stroke:#818cf8,stroke-width:2px,color:#e0e7ff;
-    classDef cache fill:#2e1065,stroke:#c084fc,stroke-width:2px,color:#fae8ff;
-    classDef pay fill:#064e3b,stroke:#34d399,stroke-width:2px,color:#ecfdf5;
-    class APIGateway,Client edge;
-    class BillPaySvc,BankingSvc svc;
-    class RedisCache,BullMQQueue,DB cache;
-    class PayU,Razorpay pay;
+    A1 --> B1
+    A2 --> B2
+    A3 --> B2
+    B1 --> C1
+    B2 <--> C1
+    B3 --> C1
+    C1 <--> C2
+    C1 <--> C3
+    C3 <--> C4
+    C1 --> D1
+    C1 --> D2
 ```
+
+</details>
+
+<details>
+<summary><strong>🚨 2. AI Incident Monitoring, Call Analysis &amp; RCA Platform</strong></summary>
+<br/>
+<blockquote>Distributed event processing and RAG pipeline for monitoring telecommunication metrics, analyzing call logs with LLMs, and triggering automated omnichannel incident escalations.</blockquote>
+
+```mermaid
+graph TD
+    subgraph IngestionLayer["1. Data Ingestion"]
+        M1["Alert Webhooks"]
+        M2["Metrics & Monitoring Data"]
+        M3["Application & Call Logs"]
+    end
+
+    subgraph MessagingLayer["2. Event Processing"]
+        K1["Distributed Event Stream (Kafka / RabbitMQ)"]
+        K2["Queue & Worker Processing (BullMQ)"]
+    end
+
+    subgraph Microservices["3. Backend & AI Platform"]
+        G1["API Gateway"]
+        I1["Incident Management Service"]
+        R1["AI / RAG Service"]
+        V1["Vector Database"]
+        C1["Redis Caching Layer"]
+        L1["LLM Reasoning Service"]
+    end
+
+    subgraph EscalationLayer["4. Notification Layer"]
+        N1["Voice Notifications (Twilio)"]
+        N2["Messaging Notifications (WhatsApp)"]
+        N3["Email Notifications (SMTP)"]
+        N4["Team Collaboration Alerts (Slack)"]
+    end
+
+    M1 --> K1
+    M2 --> K1
+    M3 --> K1
+    K1 --> K2
+    K2 --> G1
+    G1 --> I1
+    I1 <--> R1
+    R1 <--> V1
+    R1 <--> C1
+    R1 <--> L1
+    I1 --> N1
+    I1 --> N2
+    I1 --> N3
+    I1 --> N4
+```
+
+</details>
+
+<details>
+<summary><strong>🛡️ 3. Enterprise Microservices Core &amp; High-Throughput API Gateway</strong></summary>
+<br/>
+<blockquote>High-performance API Gateway routing requests with security headers, RBAC auth guards, rate limiting, and real-time load balancing to downstream services.</blockquote>
+
+```mermaid
+graph TD
+    subgraph Clients["1. Client Access Layer"]
+        C1["Client Applications & Monitoring Webhooks"]
+    end
+
+    subgraph GatewayCore["2. API Gateway"]
+        G1["Security & Header Sanitizer"]
+        G2["Auth Guard & RBAC"]
+        G3["Rate Limiter & Throttler"]
+        G4["Real-Time Event Hub"]
+        G5["Path Router & Load Balancer"]
+    end
+
+    subgraph Downstream["3. Microservices Core"]
+        D1["Incident Management Service"]
+        D2["AI Analysis Service"]
+        D3["Knowledge Base Service"]
+        D4["Service Health Verification"]
+    end
+
+    C1 --> G1
+    G1 --> G2
+    G2 --> G3
+    G3 --> G5
+    G2 <--> G4
+    G5 --> D1
+    G5 --> D2
+    G5 --> D3
+    G5 --> D4
+```
+
+</details>
+
+<details>
+<summary><strong>📄 4. Document Ingestion &amp; Asynchronous RAG Root Cause Analysis (RCA) Pipeline</strong></summary>
+<br/>
+<blockquote>End-to-end multimodal document ingestion and vector search workflow for extracting structured insights, text chunks, and root cause resolution steps.</blockquote>
+
+```mermaid
+graph TD
+    subgraph Extraction["1. Document Ingestion"]
+        D1["PDF / Word / Text Documents"]
+        D2["Images & Screenshots"]
+        D3["Event-Based Task Processing"]
+    end
+
+    subgraph RAGWorker["2. RAG Processing Pipeline"]
+        W1["Asynchronous Document Processing"]
+        W2["Text Extraction & Chunking"]
+        W3["Redis Caching Layer"]
+        W4["Vector Database (Chroma / Pinecone)"]
+    end
+
+    subgraph GeminiRCA["3. AI Analysis & RCA"]
+        G1["Multimodal LLM (Gemini / GPT)"]
+        G2["Context-Aware Prompting"]
+        G3["Root Cause Analysis & Resolution Steps"]
+    end
+
+    D1 --> D3
+    D2 --> D3
+    D3 --> W1
+    W1 --> W2
+    W2 <--> W3
+    W2 <--> W4
+    W4 <--> G1
+    G1 --> G2
+    G2 --> G3
+```
+
+</details>
+
+<details>
+<summary><strong>💬 5. Multi-Country WhatsApp Cloud API &amp; Conversational AI Bot</strong></summary>
+<br/>
+<blockquote>Production WhatsApp bot architecture with HMAC signature verification, Redis queue buffering, NLP intent classification, and automated customer query resolution.</blockquote>
+
+```mermaid
+graph TD
+    subgraph WhatsAppClient["1. WhatsApp User Interface"]
+        U1["WhatsApp Mobile & Web App"]
+        U2["Interactive Quick-Reply Buttons"]
+    end
+
+    subgraph WebhookGateway["2. Webhook Ingestion & Auth"]
+        W1["Express Webhook Handler"]
+        W2["HMAC Signature Verification"]
+        W3["Redis Message Queue"]
+    end
+
+    subgraph BotEngine["3. Conversational Router & NLP"]
+        R1["Message Intent Classifier"]
+        R2["Session State & Context Manager"]
+        R3["Catalog & FAQ Resolution Search"]
+    end
+
+    subgraph ServiceIntegration["4. Backend & Fulfillment"]
+        D1["Order Fulfillment Service"]
+        D2["Customer CRM Database"]
+        D3["Live Support Agent Handover"]
+    end
+
+    U1 --> W1
+    U2 --> W1
+    W1 --> W2
+    W2 --> W3
+    W3 --> R1
+    R1 <--> R2
+    R1 --> R3
+    R3 <--> D1
+    R3 <--> D2
+    R1 --> D3
+```
+
+</details>
 
 ---
 
@@ -159,10 +322,41 @@ flowchart TD
 <table>
   <tr>
     <td width="50%" valign="top">
-      <h3>🎙️ AI Voice Assistant & Call Insights</h3>
+      <h3>✉️ SheetSync — Interactive Lead &amp; Bulk Mailer Suite</h3>
+      <p>Production email outreach and lead automation suite built for high deliverability and multi-account campaign management.</p>
+      <ul>
+        <li>Batch raw email parsing, <strong>Fresh Outreach vs Follow-Up modes</strong>, and live SMTP delivery logging.</li>
+        <li>Automated Gmail drafts sync and personalized PDF attachments pipeline.</li>
+        <li>Built with high-responsiveness using <strong>Next.js 16, React 19, and Nodemailer</strong>.</li>
+      </ul>
+      <p>
+        <img src="https://img.shields.io/badge/Next.js%2016-000000?style=flat-square&logo=nextdotjs&logoColor=white" />
+        <img src="https://img.shields.io/badge/React%2019-61DAFB?style=flat-square&logo=react&logoColor=black" />
+        <img src="https://img.shields.io/badge/SMTP-EA4335?style=flat-square&logo=gmail&logoColor=white" />
+      </p>
+    </td>
+    <td width="50%" valign="top">
+      <h3>💳 Enterprise BBPS Payment SaaS Platform</h3>
+      <p>High-scale AI SaaS and BBPS bill payments engine integrated with payment gateways, analytics, and campaign dashboards.</p>
+      <ul>
+        <li>Engineered reliable payment flows with <strong>PayU &amp; Razorpay</strong> and real-time webhook reconciliation.</li>
+        <li>Designed high-concurrency client campaign analytics and bill payment tracking dashboards.</li>
+        <li>Built with <strong>Next.js 16, React.js, and BBPS APIs</strong>.</li>
+      </ul>
+      <p>
+        <img src="https://img.shields.io/badge/Next.js-000000?style=flat-square&logo=nextdotjs&logoColor=white" />
+        <img src="https://img.shields.io/badge/BBPS-0052CC?style=flat-square" />
+        <img src="https://img.shields.io/badge/PayU-1B98E0?style=flat-square" />
+        <img src="https://img.shields.io/badge/Razorpay-0C2340?style=flat-square&logo=razorpay&logoColor=white" />
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%" valign="top">
+      <h3>🎙️ AI Voice Assistant &amp; Call Insights</h3>
       <p>Real-time voice intelligence pipeline powering low-latency bi-directional voice agents and automated call workflows.</p>
       <ul>
-        <li>Sub-second end-to-end voice latency using <strong>FastAPI, WebRTC, Twilio, STT & TTS</strong>.</li>
+        <li>Sub-second end-to-end voice latency using <strong>FastAPI, WebRTC, Twilio, STT &amp; TTS</strong>.</li>
         <li>Automated root cause analysis and sentiment scoring via LLM-based post-call processing.</li>
         <li>Dynamic prompt chaining for structured task completion and CRM syncing.</li>
       </ul>
@@ -174,7 +368,7 @@ flowchart TD
       </p>
     </td>
     <td width="50%" valign="top">
-      <h3>🌍 Multi-Country Visa & CSC AI Chatbots</h3>
+      <h3>🌍 Multi-Country Visa &amp; CSC AI Chatbots</h3>
       <p>Enterprise AI conversational assistants deployed across multiple countries and the nationwide CSC network.</p>
       <ul>
         <li>Provides instant query resolution for international visa requirements and government bill services.</li>
@@ -190,7 +384,7 @@ flowchart TD
   </tr>
   <tr>
     <td width="50%" valign="top">
-      <h3>💳 CSC & SVC Bill Payment Platforms</h3>
+      <h3>💳 CSC &amp; SVC Bill Payment Platforms</h3>
       <p>Mission-critical fintech infrastructure powering nationwide utility bill payment workflows.</p>
       <ul>
         <li>Engineered full-stack services using <strong>Node.js, Express, MongoDB, and Redis</strong>.</li>
@@ -234,7 +428,7 @@ flowchart TD
       </p>
     </td>
     <td width="50%" valign="top">
-      <h3>🔗 Web3 & Bound Finance Systems</h3>
+      <h3>🔗 Web3 &amp; Bound Finance Systems</h3>
       <p>Decentralized finance frontend modules and smart contract wallet integrations.</p>
       <ul>
         <li>Integrated non-custodial wallet connectors (MetaMask, WalletConnect) with BSC contracts.</li>
